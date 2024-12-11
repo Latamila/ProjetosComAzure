@@ -12,7 +12,7 @@ Você desenvolverá seu código usando o Visual Studio Code. Os arquivos de cód
 
 Dica : Se você já clonou o repositório mslearn-ai-services , abra-o no Visual Studio code. Caso contrário, siga estas etapas para cloná-lo para seu ambiente de desenvolvimento.
 
-Inicie o Visual Studio Code.
+<h2>Inicie o Visual Studio Code.</h2>
 
 Abra a paleta (SHIFT+CTRL+P) e execute o comando Git: Clone para clonar o repositório para uma pasta local (não importa qual pasta).https://github.com/MicrosoftLearning/mslearn-ai-services
 
@@ -24,59 +24,71 @@ Observação : se você for solicitado a adicionar os ativos necessários para c
 
 Expanda a pasta.Labfiles/04-use-a-container
 
-Provisionar um recurso do Azure AI Services
+<h2>Provisionar um recurso do Azure AI Services</h2>
+
+
 Se você ainda não tiver um em sua assinatura, precisará provisionar um recurso do Azure AI Services .
 
 Abra o portal do Azure em e entre usando a conta da Microsoft associada à sua assinatura do Azure.https://portal.azure.com
+
 Na barra de pesquisa superior, pesquise por Serviços de IA do Azure , selecione Serviços de IA do Azure e crie um recurso de conta multisserviço de Serviços de IA do Azure com as seguintes configurações:
-Assinatura : Sua assinatura do Azure
-Grupo de recursos : escolha ou crie um grupo de recursos (se estiver usando uma assinatura restrita, talvez você não tenha permissão para criar um novo grupo de recursos - use o fornecido)
-Região : Escolha qualquer região disponível
-Nome : Insira um nome exclusivo
-Nível de preço : Standard S0
+
+- Assinatura : Sua assinatura do Azure
+- Grupo de recursos : escolha ou crie um grupo de recursos (se estiver usando uma assinatura restrita, talvez você não tenha permissão para criar um novo grupo de recursos - use o fornecido)
+- Região : Escolha qualquer região disponível
+- Nome : Insira um nome exclusivo
+- Nível de preço : Standard S0
+
 Selecione as caixas de seleção necessárias e crie o recurso.
+
 Aguarde a conclusão da implantação e, em seguida, visualize os detalhes da implantação.
+
 Quando o recurso tiver sido implantado, vá até ele e visualize sua página Keys and Endpoint . Você precisará do endpoint e de uma das chaves desta página no próximo procedimento.
-Implantar e executar um contêiner de análise de sentimento
+
+<h2>Implantar e executar um contêiner de análise de sentimento</h2>
+
 Muitas APIs de serviços de IA do Azure comumente usadas estão disponíveis em imagens de contêiner. Para uma lista completa, confira a documentação dos serviços de IA do Azure . Neste exercício, você usará a imagem de contêiner para a API de análise de Sentimento do Text Analytics ; mas os princípios são os mesmos para todas as imagens disponíveis.
 
 No portal do Azure, na página inicial , selecione o botão ＋Criar um recurso , pesquise por instâncias de contêiner e crie um recurso Instâncias de contêiner com as seguintes configurações:
 
 Noções básicas :
 
-Assinatura : Sua assinatura do Azure
-Grupo de recursos : escolha o grupo de recursos que contém seu recurso de serviços de IA do Azure
-Nome do contêiner : Insira um nome exclusivo
-Região : Escolha qualquer região disponível
-Zonas de disponibilidade : Nenhuma
-SKU : Padrão
-Fonte da imagem : Outro Registro
-Tipo de imagem : Pública
-Imagem :mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment:latest
-Tipo de SO : Linux
-Tamanho : 1 vcpu, 8 GB de memória
-Rede :
+- Assinatura : Sua assinatura do Azure
+- Grupo de recursos : escolha o grupo de recursos que contém seu recurso de serviços de IA do Azure
+- Nome do contêiner : Insira um nome exclusivo
+- Região : Escolha qualquer região disponível
+- Zonas de disponibilidade : Nenhuma
+- SKU : Padrão
+- Fonte da imagem : Outro Registro
+- Tipo de imagem : Pública
+- Imagem :mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment:latest
+- Tipo de SO : Linux
+- Tamanho : 1 vcpu, 8 GB de memória
 
-Tipo de rede : Pública
-Rótulo do nome DNS : insira um nome exclusivo para o ponto de extremidade do contêiner
-Portas : Altere a porta TCP de 80 para 5000
-Avançado :
+<h2>Rede :</h2>
 
-Política de reinicialização : Em caso de falha
 
-Variáveis ​​de ambiente :
+- Tipo de rede : Pública
+- Rótulo do nome DNS : insira um nome exclusivo para o ponto de extremidade do contêiner
+- Portas : Altere a porta TCP de 80 para 5000
 
-Marcar como seguro	Chave	Valor
-Sim	ApiKey	Qualquer chave para o seu recurso de serviços de IA do Azure
-Sim	Billing	O URI do ponto de extremidade para seu recurso de serviços de IA do Azure
-Não	Eula	accept
-Substituição de comando : [ ]
+<h2>Avançado :</h2>
 
-Gerenciamento de chaves : chaves gerenciadas pela Microsoft (MMK)
 
-Etiquetas :
+- Política de reinicialização : Em caso de falha
+- Variáveis ​​de ambiente :
+    - Marcar como seguro	Chave	Valor
+                      Sim	ApiKey	Qualquer chave para o seu recurso de serviços de IA do Azure
+                      Sim	Billing	O URI do ponto de extremidade para seu recurso de serviços de IA do Azure
+                        Não	Eula	accept
+- Substituição de comando : [ ]
 
-Não adicione nenhuma tag
+- Gerenciamento de chaves : chaves gerenciadas pela Microsoft (MMK)
+
+<h2>Etiquetas :</h2>
+
+- Não adicione nenhuma tag
+
 Selecione Revisar + criar e, em seguida, selecione Criar . Aguarde a conclusão da implantação e, em seguida, vá para o recurso implantado. > Observação Observe que a implantação de um contêiner do Azure AI em Instâncias de Contêiner do Azure normalmente leva de 5 a 10 minutos (provisionamento) antes que eles estejam prontos para uso.
 
 Observe as seguintes propriedades do recurso de instância do contêiner na página Visão geral :
