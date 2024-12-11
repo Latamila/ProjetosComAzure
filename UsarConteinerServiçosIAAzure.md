@@ -92,8 +92,11 @@ Noções básicas :
 
 - Não adicione nenhuma tag
 
-Selecione Revisar + criar e, em seguida, selecione Criar . Aguarde a conclusão da implantação e, em seguida, vá para o recurso implantado. > Observação Observe que a implantação de um contêiner do Azure AI em Instâncias de Contêiner do Azure normalmente leva de 5 a 10 minutos (provisionamento) antes que eles estejam prontos para uso.
---- 
+Selecione Revisar + criar e, em seguida, selecione Criar. 
+
+Aguarde a conclusão da implantação e, em seguida, vá para o recurso implantado.
+
+<h3>Observação Observe que a implantação de um contêiner do Azure AI em Instâncias de Contêiner do Azure normalmente leva de 5 a 10 minutos (provisionamento) antes que eles estejam prontos para uso.</h3> 
 
 Observe as seguintes propriedades do recurso de instância do contêiner na página Visão geral :
 
