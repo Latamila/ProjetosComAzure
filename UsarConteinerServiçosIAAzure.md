@@ -90,15 +90,19 @@ Noções básicas :
 - Não adicione nenhuma tag
 
 Selecione Revisar + criar e, em seguida, selecione Criar . Aguarde a conclusão da implantação e, em seguida, vá para o recurso implantado. > Observação Observe que a implantação de um contêiner do Azure AI em Instâncias de Contêiner do Azure normalmente leva de 5 a 10 minutos (provisionamento) antes que eles estejam prontos para uso.
+--- 
 
 Observe as seguintes propriedades do recurso de instância do contêiner na página Visão geral :
 
-Status : Deve estar em execução .
-Endereço IP : este é o endereço IP público que você pode usar para acessar suas instâncias de contêiner.
-FQDN : este é o nome de domínio totalmente qualificado do recurso de instâncias do contêiner. Você pode usá-lo para acessar as instâncias do contêiner em vez do endereço IP.
-Observação : neste exercício, você implantou a imagem do contêiner de serviços de IA do Azure para análise de sentimentos em um recurso de Instâncias de Contêiner do Azure (ACI). Você pode usar uma abordagem semelhante para implantá-la em um host do Docker em seu próprio computador ou rede executando o comando a seguir (em uma única linha) para implantar o contêiner de análise de sentimentos em sua instância local do Docker, substituindo <yourEndpoint> e <yourKey> pelo URI do seu ponto de extremidade e qualquer uma das chaves para seu recurso de serviços de IA do Azure. O comando procurará a imagem em sua máquina local e, se não a encontrar lá, a extrairá do registro de imagem mcr.microsoft.com e a implantará em sua instância do Docker. Quando a implantação for concluída, o contêiner será iniciado e escutará as solicitações de entrada na porta 5000.
+- Status : Deve estar em execução .
+- Endereço IP : este é o endereço IP público que você pode usar para acessar suas instâncias de contêiner.
+- FQDN : este é o nome de domínio totalmente qualificado do recurso de instâncias do contêiner. Você pode usá-lo para acessar as instâncias do contêiner em vez do endereço IP.
+- Observação : neste exercício, você implantou a imagem do contêiner de serviços de IA do Azure para análise de sentimentos em um recurso de Instâncias de Contêiner do Azure (ACI). Você pode usar uma abordagem semelhante para implantá-la em um host do Docker em seu próprio computador ou rede executando o comando a seguir (em uma única linha) para implantar o contêiner de análise de sentimentos em sua instância local do Docker, substituindo <yourEndpoint> e <yourKey> pelo URI do seu ponto de extremidade e qualquer uma das chaves para seu recurso de serviços de IA do Azure. O comando procurará a imagem em sua máquina local e, se não a encontrar lá, a extrairá do registro de imagem mcr.microsoft.com e a implantará em sua instância do Docker. Quando a implantação for concluída, o contêiner será iniciado e escutará as solicitações de entrada na porta 5000.
 
+``docker
 docker run --rm -it -p 5000:5000 --memory 8g --cpus 1 mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment:latest Eula=accept Billing=<yourEndpoint> ApiKey=<yourKey>
+``docker
+
 Use o recipiente
 No seu editor, abra rest-test.cmd e edite o comando curl que ele contém (mostrado abaixo), substituindo <seu_endereço_IP_ACI_ou_FQDN > pelo endereço IP ou FQDN do seu contêiner.
 
