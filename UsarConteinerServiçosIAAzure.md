@@ -118,6 +118,9 @@ Digite o seguinte comando para executar o script:
 
 Verifique se o comando retorna um documento JSON contendo informações sobre o sentimento detectado nos dois documentos de entrada (que devem ser positivos e negativos, nessa ordem).
 
+![image](https://github.com/user-attachments/assets/10956435-dd42-4108-a5ee-c47f58ee43ba)
+
+
 <h2>Limpar</h2>
 
 Se você terminou de experimentar sua instância de contêiner, você deve excluí-la.
