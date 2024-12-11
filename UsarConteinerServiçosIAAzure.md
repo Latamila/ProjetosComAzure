@@ -98,6 +98,8 @@ Aguarde a conclusão da implantação e, em seguida, vá para o recurso implanta
 
 <h3>Observação Observe que a implantação de um contêiner do Azure AI em Instâncias de Contêiner do Azure normalmente leva de 5 a 10 minutos (provisionamento) antes que eles estejam prontos para uso.</h3> 
 
+Observação Observe que a implantação de um contêiner do Azure AI em Instâncias de Contêiner do Azure normalmente leva de 5 a 10 minutos (provisionamento) antes que eles estejam prontos para uso.
+
 Observe as seguintes propriedades do recurso de instância do contêiner na página Visão geral :
 
 - Status : Deve estar em execução .
