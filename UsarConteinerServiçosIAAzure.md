@@ -76,11 +76,11 @@ Noções básicas :
 
 
 - Política de reinicialização : Em caso de falha
-- Variáveis ​​de ambiente :
-    - Marcar como seguro	Chave	Valor
-                      Sim	ApiKey	Qualquer chave para o seu recurso de serviços de IA do Azure
-                      Sim	Billing	O URI do ponto de extremidade para seu recurso de serviços de IA do Azure
-                        Não	Eula	accept
+- Variáveis ​​de ambiente:
+- Sim	ApiKey	Qualquer chave para o seu recurso de serviços de IA do Azure
+- Sim	Billing	O URI do ponto de extremidade para seu recurso de serviços de IA do Azure
+- Não	Eula	accept
+  
 - Substituição de comando : [ ]
 
 - Gerenciamento de chaves : chaves gerenciadas pela Microsoft (MMK)
