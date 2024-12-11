@@ -26,6 +26,9 @@ Expanda a pasta.Labfiles/04-use-a-container
 
 <h2>Provisionar um recurso do Azure AI Services</h2>
 
+![image](https://github.com/user-attachments/assets/4f4998e1-0e23-41d1-ba43-955030f748b1)
+
+
 
 Se você ainda não tiver um em sua assinatura, precisará provisionar um recurso do Azure AI Services .
 
@@ -119,6 +122,9 @@ Digite o seguinte comando para executar o script:
 Verifique se o comando retorna um documento JSON contendo informações sobre o sentimento detectado nos dois documentos de entrada (que devem ser positivos e negativos, nessa ordem).
 
 ![image](https://github.com/user-attachments/assets/10956435-dd42-4108-a5ee-c47f58ee43ba)
+
+![image](https://github.com/user-attachments/assets/1d05aa10-e017-4408-9179-5e73a14f77e2)
+
 
 
 <h2>Limpar</h2>
